@@ -1,0 +1,33 @@
+.nav {
+  display: flex;
+  /* gap: 40px; */
+  width: 100%;
+  height: auto;
+  background: cornflowerblue;
+  padding: 20px 0;
+  color: black;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigators{
+  height: 100%;  
+}
+.navigators:hover{
+  background-color: salmon;
+}
+
+
+.links {
+  text-decoration: none;
+  color: black;
+  padding: 0 8px;
+}
+
+/* .create {
+  width: 100%;
+  text-align: end;
+} */
+

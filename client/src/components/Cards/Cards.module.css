@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  /* margin: 4px; */
+  background: #cecece;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.select {
+  padding: 5px;
+}
+
+.paginationButtons {
+  display: flex;
+  gap: 10px;
+  /* margin-top: 10px; */
+  height:auto;
+  justify-content: right;
+  width: 98%;
+  margin-bottom: 20px;
+    /* width: 14%;
+    height: 40px    ; */
+}
+
+.paginationButtons button {
+  padding: 16px 35px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.paginationButtons button:hover {
+  background-color: #2980b9;
+}
+
+
+.cards {
+  width: 101%;
+  height: 70%;
+  margin: auto;
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.select {
+  padding: 2px 15px;
+  background-color: #27ae60;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 20%;
+  height: 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.select:hover{
+  background-color: #219a49;
+}
+
+.current{
+    display: flex;
+    align-items: center;
+}
