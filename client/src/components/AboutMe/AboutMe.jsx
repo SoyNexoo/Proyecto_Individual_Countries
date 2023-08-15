@@ -18,14 +18,28 @@ const AboutMe = () => {
         <h3>Devoloper web junior 💻</h3>
       </div>
       <div className={s.about}>
-        🚀 Apasionado por la programación 💻 | Desarrollador web! | Aprendiendo
-        y creciendo en Henry Bootcamp 🎓 | React ⚛️ y Redux 🔄 | habilidades en
-        HTML, CSS & JavaScript 🌐 | Explorando el mundo de NodeJS 🛠️ |
-        ¡Construyendo el futuro, cruzando el camino del junior! ✨ | Comunicador
-        eficiente y amante del trabajo en equipo 🤝 | ¡Un futuro ingeniero de
-        software comprometido con el aprendizaje continuo y el crecimiento
-        personal! 🌱
+        <p>
+          🚀 Apasionado por la programación 💻 | Desarrollador web! |
+          Aprendiendo y creciendo en Henry Bootcamp 🎓 | React ⚛️ y Redux 🔄 |
+          habilidades en HTML, CSS & JavaScript 🌐 | Explorando el mundo de
+          NodeJS 🛠️ | ¡Construyendo el futuro, cruzando el camino del junior! ✨
+          | Comunicador eficiente y amante del trabajo en equipo 🤝 | ¡Un futuro
+          ingeniero de software comprometido con el aprendizaje continuo y el
+          crecimiento personal! 🌱
+        </p>
       </div>
+      <div className={s.technology}>
+        <h1>Mi Tech Skils ⚙️</h1>
+        <div className={s.tech}>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" />
+          <img src="https://assets.stickpng.com/images/5848309bcef1014c0b5e4a9a.png" />
+          <img src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" />
+          <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png" />
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174854.png" />
+        </div>
+      </div>
+
     </div>
   );
 };

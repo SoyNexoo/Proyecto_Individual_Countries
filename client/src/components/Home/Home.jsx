@@ -22,6 +22,11 @@ export default function Home() {
           </NavLink>
         </div>
         <div className={s.navigators}>
+          <NavLink to="/about" className={({isActive}) => isActive ? `${s.links} ${s.activeLink}` : s.links } activeClassName={s.activeLink}>
+            ABOUT ME
+          </NavLink>
+        </div>
+        <div className={s.navigators}>
           <NavLink  activeClassName={s.activeLink} to="/activity" className={({isActive}) => isActive ? `${s.links} ${s.activeLink}` : s.links } >
             ACTIVITIES
           </NavLink>
