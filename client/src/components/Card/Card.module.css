@@ -12,7 +12,7 @@
 }
 
 .nameCountry{
-    color: #6c00f8;
+  color: black;
 }
 
 .img {
@@ -32,8 +32,9 @@
   width: 70%;
   border-radius: 1rem;
   border: none;
-  background-color: #6c00f8;
-  color: #fff;
+  background-color: #2b2b2b;
+  color: #f7dd4b;
+
   font-size: 1rem;
   padding: 0.5rem 1rem;
   position: absolute;
@@ -47,7 +48,7 @@
 }
 
 .container:hover {
-    border-color: #6c00f8;
+    border-color: #2b2b2b;
     /* -webkit-box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
     box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877); */
     transform: scale(1.1);

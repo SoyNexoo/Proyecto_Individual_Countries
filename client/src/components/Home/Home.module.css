@@ -1,33 +1,51 @@
 .nav {
   display: flex;
-  /* gap: 40px; */
-  width: 100%;
-  height: auto;
-  background: cornflowerblue;
-  padding: 20px 0;
-  color: black;
-
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: auto;
+  background-color: #f7dd4b;
+  color: rgb(0, 0, 0);
 }
 
-.navigators{
-  height: 100%;  
+.navigators {
+  display: inline-block;
+  padding: 20px 20px;
+  margin: 0 10px;
 }
-.navigators:hover{
-  background-color: salmon;
+.navigators:hover {
+  background-color: rgb(255, 196, 0); /* Cambia el fondo al hacer hover */
 }
-
 
 .links {
   text-decoration: none;
-  color: black;
-  padding: 0 8px;
+  color: rgb(0, 0, 0);
+  /* transition: color 0.3s; */
 }
 
-/* .create {
-  width: 100%;
-  text-align: end;
-} */
 
+
+.homeLink {
+  order: -1; /* Coloca el enlace de Home al principio */
+}
+
+.linksContainer {
+  display: flex;
+  align-items: center;
+}
+
+.activeLink {
+    /* display: inline-block; */
+  /* padding: 20px 20px; */
+  text-decoration: underline !important;
+  
+  color: black;
+}
+.p {
+  font-size: 36px; /* Ajusta el tamaño de la fuente según tus preferencias */
+  font-weight: bold; /* Hace que el texto sea más audaz */
+  color: #000000; /* Cambia el color del texto */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  letter-spacing: 2px; /* Aumenta el espacio entre las letras */
+  text-shadow: 2px 2px 4px rgba(255, 166, 0, 0.2); /* Agrega una sombra al texto */
+  margin: 0; /* Elimina cualquier margen */
+}

@@ -1,0 +1,13 @@
+.container{
+    background-color: rgb(29, 29, 29);
+    text-align: center;
+    padding: 20px;
+}
+
+.container h2{
+    color: rgb(255, 183, 48);
+}
+.container p{
+    margin-top: 2px ;
+    color: rgb(212, 212, 212);
+}

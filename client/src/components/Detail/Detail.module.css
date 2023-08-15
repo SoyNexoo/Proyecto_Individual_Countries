@@ -1,6 +1,7 @@
 .background {
-  background: skyblue;
+  background-color: #222222;
 }
+
 
 .container {
   display: flex;
@@ -37,15 +38,16 @@
 
 .info {
   flex: 2;
-  background-color: rgb(236, 236, 236);
-  box-shadow: inset 0 0  5px 2px #a8a7a7;
+  background-color: #f7dd4b;
+
+  box-shadow: inset -5px -5px 2px rgb(255, 196, 0);
   padding: 25px;
   /* padding-bottom: auto; */
   padding-right: 0;
   height: auto;
   font-size: 20px;
   max-width: 600px;
-  border: 2px solid #b4b2b2;
+  /* border: 2px solid #b4b2b2; */
 }
 
 .info button {

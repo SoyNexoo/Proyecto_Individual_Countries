@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #cecece;
+  height: auto;
+}
+
+.selectors {
+  display: flex;
+  width: 50%;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.selectors select {
+  background-color: #f7dd4b;
+
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: inset -2px -2px 2px rgb(255, 196, 0);
+}
+
+.selectors select:hover {
+  transition: 0.5s;
+  background-color: rgb(255, 196, 0);
+  box-shadow: inset -2px -2px 2px rgb(218, 168, 7);
+}
+
+.cards {
+  width: 91%;
+  height: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}

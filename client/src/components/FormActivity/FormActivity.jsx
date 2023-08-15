@@ -57,95 +57,105 @@ export default function FormActivity() {
       countries: data.countries.filter((country) => country !== index.id),
     });
   };
-  
 
   console.log(data);
   console.log(allCountries);
   return (
-    <div className={s.create_form}>
-      <div className={s.form_header}>
-        <div className={s.text}>Create a Activity!</div>
-      </div>
-      <form onSubmit={handleSubmit}>
-        <div className={s.group}>
-          <label> Nombre: </label>
-          <input
-            onChange={handleChange}
-            value={data.name}
-            type="text"
-            name="name"
-            className={s.name}
-          />
-          {error.name && <p>{error.name}</p>}
+    <div className={s.background}>
+      <div className={s.create_form}>
+        <div className={s.form_header}>
+          <div className={s.text}>Create a Activity!</div>
         </div>
-        <div className={s.group}>
-          <label>Dificultad</label>
-          <input
-            onChange={handleChange}
-            value={data.dificultad}
-            type="number"
-            name="dificultad"
-            min="1"
-            max="5"
-          />
-          {error.dificultad && <p>{error.dificultad}</p>}
-        </div>
-        <div className={s.group}>
-          <label>Duracion</label>
-          <input
-            onChange={handleChange}
-            value={data.duracion}
-            type="number"
-            name="duracion"
-          />
-          {error.duracion && <p>{error.duracion}</p>}
-        </div>
-        <div className={s.group}>
-          <label>Temporada</label>
-          <select
-            onChange={handleChange}
-            value={data.temporada}
-            name="temporada"
-          >
-            <option value={"default"}>Season</option>
-            <option value={"Verano"}>Verano</option>
-            <option value={"Otoño"}>Otoño</option>
-            <option value={"Invierno"}>Invierno</option>
-            <option value={"Primavera"}>Primavera</option>
-          </select>
-          {error.temporada && <p>{error.temporada}</p>}
-        </div>
-        <div className={s.group}>
-          <label>Paises</label>
+        <form onSubmit={handleSubmit}>
+          <div className={s.group}>
+            <label> Nombre: </label>
+            <input
+              onChange={handleChange}
+              value={data.name}
+              type="text"
+              name="name"
+              className={s.name}
+            />
+            {error.name && <p>{error.name}</p>}
+          </div>
+          <div className={s.group}>
+            <label>Dificultad</label>
+            <input
+              onChange={handleChange}
+              value={data.dificultad}
+              type="number"
+              name="dificultad"
+              min="1"
+              max="5"
+            />
+            {error.dificultad && <p>{error.dificultad}</p>}
+          </div>
+          <div className={s.group}>
+            <label>Duracion</label>
+            <input
+              onChange={handleChange}
+              value={data.duracion}
+              type="number"
+              name="duracion"
+            />
+            {error.duracion && <p>{error.duracion}</p>}
+          </div>
+          <div className={s.group}>
+            <label>Temporada</label>
+            <select
+              onChange={handleChange}
+              value={data.temporada}
+              name="temporada"
+            >
+              <option value={"default"}>Season</option>
+              <option value={"Verano"}>Verano</option>
+              <option value={"Otoño"}>Otoño</option>
+              <option value={"Invierno"}>Invierno</option>
+              <option value={"Primavera"}>Primavera</option>
+            </select>
+            {error.temporada && <p>{error.temporada}</p>}
+          </div>
+          <div className={s.group}>
+            <label>Paises</label>
 
-          <select onChange={handleCountry} name="countries">
-            {allCountries.map((country) => {
+            <select onChange={handleCountry} name="countries">
+              {allCountries.map((country) => {
+                return (
+                  <option key={country.id} value={country.id}>
+                    {country.emoji + " " + country.name}
+                  </option>
+                );
+              })}
+            </select>
+            {error.countries && <p>{error.countries}</p>}
+          </div>
+          <div className={s.group}>
+            {data.countries.map((ele) => {
+              const countryId = allCountries.find(
+                (country) => country.id === ele
+              );
+              console.log(data.countries);
               return (
-                <option key={country.id} value={country.id}>
-                  {country.emoji + " " + country.name}
-                </option>
+                <>
+                  <img
+                    src={countryId.flag}
+                    className={s.img}
+                    key={countryId.id}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => deleteImg(countryId)}
+                    className={s.button}
+                  >
+                    X
+                  </button>
+                </>
               );
             })}
-          </select>
-          {error.countries && <p>{error.countries}</p>}
-        </div>
-        <div className={s.group}>
-          {data.countries.map((ele) => {
-            
-            const countryId = allCountries.find(
-              (country) => country.id === ele
-            );
-            console.log(data.countries);
-            return (
-              <>
-              <img src={countryId.flag} className={s.img} key={countryId.id} />
-              <button type="button" onClick={() => deleteImg(countryId)}  className={s.button}>X</button>
-              </>
-            );
-          })}
-          <input type="submit" />
-        </div>
-      </form>
+            <input type="submit" />
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,21 @@
+.notFound{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    flex-direction: column;
+    /* background: #131313; */
+    color: #1f1f1f;
+    font-size: 70px;
+    font-family: 'Fira Mono', monospace;
+    letter-spacing: -7px;
+    animation: glitch 1s linear infinite;
+}
+
+.notFound p{
+    margin-top: 10px;
+    font-size: 30px;
+    letter-spacing: 0px;
+}

@@ -6,6 +6,9 @@ import Cards from "./components/Cards/Cards";
 import { Detail } from "./components/Detail/Detail";
 import FormActivity from "./components/FormActivity/FormActivity";
 import Activity from "./components/ActivityCards/ActivityCards";
+// import MiComponente from "./components/Footer/miComponente";
+import Footer from "./components/Footer/Footer";
+import AboutMe from "./components/AboutMe/AboutMe";
 function App() {
   const location = useLocation();
 
@@ -18,7 +21,9 @@ function App() {
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/activity" element={<Activity />} />
         <Route path="/create" element={<FormActivity />} />
+        <Route path="/about" element={<AboutMe /> } />
       </Routes>
+        <Footer/>
     </div>
   );
 }

@@ -13,6 +13,7 @@ import {
   sortedByName,
 } from "../../redux/action";
 import SearchBar from "../Home/SearchBar/SearchBar";
+import NotFound from "../NotFound/NotFound";
 
 const Cards = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -52,14 +53,7 @@ const Cards = () => {
     return allCountries.slice(startIndex, endIndex);
   }
 
-  const getCountriesForActivity = () => {
-    const activities = allActivities.map((activity) => {
-      <option value={activity.id} name={activity.name}>
-        {activity.name}
-      </option>;
-    });
-    return activities;
-  };
+ 
 
   function nextHandler() {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPage - 1));
@@ -122,6 +116,7 @@ const Cards = () => {
         <SearchBar setCurrentPage={setCurrentPage} />
         {botones()}
       </div>
+          {countryPerPages.length ? (
 
       <div className={s.cards}>
         {countryPerPages.map((nation) => (
@@ -134,6 +129,7 @@ const Cards = () => {
           />
         ))}
       </div>
+          ) : <NotFound/> }
     </div>
   );
 };

@@ -1,11 +1,23 @@
+.background{
+  background-color: #222222;
+  margin: 0;
+  padding: 0; /* Elimina cualquier padding para extender el color de fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+}
+
 .create_form {
-  width: 300px;
-  margin: 25px auto;
+  
+  width: 400px;
+  margin: 20px ;
   padding: 20px;
-  border: 1px solid #ccc;
+  
   border-radius: 10px;
-  background-color: #e8e8e8;
-  box-shadow: 2px 2px 10px #ccc;
+  background-color: #f7dd4b;
+  box-shadow: inset -5px -5px 3px rgb(255, 196, 0);
 }
 
 .form_header {
@@ -41,6 +53,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
   transition: 0.5s;
+  box-shadow: 2px 2px 2px rgb(119, 118, 118);
 }
 
 input[type="submit"] {

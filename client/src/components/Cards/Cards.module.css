@@ -32,15 +32,18 @@
 
 .paginationButtons button {
   padding: 16px 35px;
-  background-color: #3498db;
+  background-color: #f7dd4b;
   border: none;
   color: white;
   cursor: pointer;
   border-radius: 20px;
+  box-shadow: inset -2px -2px 2px rgb(255, 196, 0);
 }
 
 .paginationButtons button:hover {
-  background-color: #2980b9;
+  transition: 0.5s;
+  background-color: rgb(255, 196, 0);
+  box-shadow: inset -2px -2px 2px rgb(218, 168, 7);
 }
 
 
@@ -57,19 +60,21 @@
 
 .select {
   padding: 2px 15px;
-  background-color: #27ae60;
+  background-color: #f7dd4b;
+  box-shadow: inset -2px -2px 2px rgb(255, 196, 0);
   border: none;
   color: white;
   cursor: pointer;
   margin-right: 10px;
   width: 20%;
   height: 50px;
-  border-radius: 20px;
+  border-radius: 10px;
   text-align: center;
 }
 
 .select:hover{
-  background-color: #219a49;
+  background-color: rgb(255, 196, 0);
+  box-shadow: inset -2px -2px 2px rgb(218, 168, 7);
 }
 
 .current{

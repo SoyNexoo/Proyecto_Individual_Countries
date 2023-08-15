@@ -113,6 +113,7 @@ export function rootReducer(state = initialState, action) {
         if (action.payload === "asc") return a.name.localeCompare(b.name);
         else if (action.payload === "desc") return b.name.localeCompare(a.name);
       });
+      
       return {
         ...state,
         activities:
@@ -125,8 +126,8 @@ export function rootReducer(state = initialState, action) {
         ...state,
         activities:
           action.payload === "all"
-            ? state.allActivities
-            : state.allActivities.filter(
+            ? [...state.allActivities]
+            : [...state.allActivities].filter(
                 (el) => el.temporada === action.payload
               ),
       };
