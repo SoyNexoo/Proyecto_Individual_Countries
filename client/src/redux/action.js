@@ -15,7 +15,7 @@ import {
 export const getCountry = () => {
   return async (dispatch) => {
     try {
-      const { data } = await axios("http://localhost:3001/countries");
+      const { data } = await axios("/countries");
       return dispatch({
         type: GET_COUNTRY,
         payload: data,
@@ -29,7 +29,7 @@ export const getCountry = () => {
 export const getCountriesByName = (countryName) => async (dispatch) => {
   try {
     const response = await axios.get(
-      `http://localhost:3001/countries/name?pais=${countryName}`
+      `/countries/name?pais=${countryName}`
     );
     dispatch({
       type: GET_COUNTRY_NAME,
@@ -43,7 +43,7 @@ export const getCountriesByName = (countryName) => async (dispatch) => {
 export const addActivity = (datos) => {
   return async (dispatch) => {
     try {
-      await axios.post("http://localhost:3001/activities", datos);
+      await axios.post("/activities", datos);
       alert("Creado con exito!");
     } catch (error) {
       console.log(error);
@@ -54,7 +54,7 @@ export const addActivity = (datos) => {
 export const getActivity = () => {
   return async (dispatch) => {
     try {
-      const { data } = await axios("http://localhost:3001/activities");
+      const { data } = await axios("/activities");
       return dispatch({
         type: GET_ACTIVITY,
         payload: data,
@@ -68,7 +68,7 @@ export const getActivity = () => {
 export const deleteActivity = (id) => {
     return async (dispatch) =>{
         try {
-            await axios.delete(`http://localhost:3001/activities/delete/${id}`)
+            await axios.delete(`/activities/delete/${id}`)
             dispatch({
                 type: DELETE_ACTIVITY,
                 payload:id

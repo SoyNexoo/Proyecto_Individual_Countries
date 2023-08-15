@@ -29,7 +29,7 @@ const AboutMe = () => {
         </p>
       </div>
       <div className={s.technology}>
-        <h1>Mi Tech Skils ⚙️</h1>
+        <h1>Mi Tech Skills ⚙️</h1>
         <div className={s.tech}>
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" />
           <img src="https://assets.stickpng.com/images/5848309bcef1014c0b5e4a9a.png" />

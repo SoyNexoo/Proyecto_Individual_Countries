@@ -10,7 +10,7 @@ export const Detail = () => {
   useEffect(() => {
     const apiInfo = async () => {
       try {
-        const { data } = await axios(`http://localhost:3001/countries/${id}`);
+        const { data } = await axios(`/countries/${id}`);
         console.log(data);
         setData(data);
         setActivity(data.Activities);

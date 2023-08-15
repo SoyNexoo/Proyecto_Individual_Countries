@@ -9,6 +9,9 @@ import Activity from "./components/ActivityCards/ActivityCards";
 // import MiComponente from "./components/Footer/miComponente";
 import Footer from "./components/Footer/Footer";
 import AboutMe from "./components/AboutMe/AboutMe";
+import axios from "axios";
+axios.defaults.baseURL = "http://localhost:3001";
+
 function App() {
   const location = useLocation();
 
