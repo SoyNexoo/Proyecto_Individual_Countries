@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from "react";
-import s from "./LandingPage.module.css";
+import  { useEffect, useState } from "react";
+import s from "./PageHome.module.css";
 import { Link } from "react-router-dom";
 // import { useState } from "react";
 export const Landing = () => {
