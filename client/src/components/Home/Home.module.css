@@ -43,9 +43,10 @@
 .p {
   font-size: 36px; /* Ajusta el tamaño de la fuente según tus preferencias */
   font-weight: bold; /* Hace que el texto sea más audaz */
-  color: #000000; /* Cambia el color del texto */
+  color: black; /* Cambia el color del texto */
   text-transform: uppercase; /* Convierte el texto a mayúsculas */
   letter-spacing: 2px; /* Aumenta el espacio entre las letras */
-  text-shadow: 2px 2px 4px rgba(255, 166, 0, 0.2); /* Agrega una sombra al texto */
+  text-shadow: 1px 1px 1px rgb(73, 68, 0); 
+  
   margin: 0; /* Elimina cualquier margen */
 }

@@ -39,10 +39,24 @@ export default function FormActivity() {
       ...data,
       countries: [...data.countries, event.target.value],
     });
+    if (data.countries.includes(event.target.value)) {
+      setError((prevErr) => ({
+        ...prevErr,
+        countries: "No se puede ingresar 2 paises",
+      }));
+    }
   };
+  console.log(error);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setData({
+      name: "",
+      dificultad: 0,
+      duracion: 0,
+      temporada: "",
+      countries: [],
+    });
     dispatch(addActivity(data));
   };
 
@@ -97,6 +111,8 @@ export default function FormActivity() {
               value={data.duracion}
               type="number"
               name="duracion"
+              min="1"
+              max="12"
             />
             {error.duracion && <p>{error.duracion}</p>}
           </div>
@@ -119,6 +135,7 @@ export default function FormActivity() {
             <label>Paises</label>
 
             <select onChange={handleCountry} name="countries">
+              <option value="default">selecciona</option>
               {allCountries.map((country) => {
                 return (
                   <option key={country.id} value={country.id}>

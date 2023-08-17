@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 const ActivityCard = ({ name, dificultad, duracion, temporada, Countries, onChange }) => {
   const dispatch = useDispatch();
   const allCountries = useSelector((s) => s.allCountries);
+  
 
   useEffect(() => {
     dispatch(getCountry());
@@ -39,7 +40,7 @@ const ActivityCard = ({ name, dificultad, duracion, temporada, Countries, onChan
         }
       })}
       </div>
-      <button onChange={onChange}>X</button>
+      <button onClick={onChange}>X</button>
 
     </div>
   );

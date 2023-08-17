@@ -26,8 +26,8 @@
     border-radius: var(--border-radius);
     transition: border-radius 0.5s ease;
     background: var(--input-bg,#fff);
-    margin-top: 7px;
-    left: 154px;
+    margin-top: 5px;
+    left: 56px;
   }
   /* styling of Input */
   .input {

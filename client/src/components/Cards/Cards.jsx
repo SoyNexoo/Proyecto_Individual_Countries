@@ -53,8 +53,6 @@ const Cards = () => {
     return allCountries.slice(startIndex, endIndex);
   }
 
- 
-
   function nextHandler() {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPage - 1));
   }
@@ -74,10 +72,11 @@ const Cards = () => {
   const botones = () => {
     return (
       <div className={s.paginationButtons}>
-        <button onClick={prevHandler}>Prev</button>
+        <button onClick={() => setCurrentPage(0)}>{"<<"}</button>
+        <button onClick={prevHandler}>{"<"}</button>
         <h2 className={s.current}>{currentPage + 1}</h2>
-
-        <button onClick={nextHandler}>Next</button>
+        <button onClick={nextHandler}>{">"}</button>
+        <button onClick={() => setCurrentPage(totalPage - 1)}>{">>"}</button>
       </div>
     );
   };
@@ -106,30 +105,35 @@ const Cards = () => {
         <select className={s.select} onChange={handleFilterByActivities}>
           <option value="default">DEFAULT</option>
           {allActivities.map((activity) => {
-            return(
-            <option value={activity.id} key={activity.id} name={activity.name}>
-              {activity.name}
-            </option>
-            )
+            return (
+              <option
+                value={activity.id}
+                key={activity.id}
+                name={activity.name}
+              >
+                {activity.name}
+              </option>
+            );
           })}
         </select>
         <SearchBar setCurrentPage={setCurrentPage} />
         {botones()}
       </div>
-          {countryPerPages.length ? (
-
-      <div className={s.cards}>
-        {countryPerPages.map((nation) => (
-          <Card
-            key={nation.id}
-            id={nation.id}
-            name={nation.name}
-            flag={nation.flag}
-            continente={nation.continente}
-          />
-        ))}
-      </div>
-          ) : <NotFound/> }
+      {countryPerPages.length ? (
+        <div className={s.cards}>
+          {countryPerPages.map((nation) => (
+            <Card
+              key={nation.id}
+              id={nation.id}
+              name={nation.name}
+              flag={nation.flag}
+              continente={nation.continente}
+            />
+          ))}
+        </div>
+      ) : (
+        <NotFound />
+      )}
     </div>
   );
 };

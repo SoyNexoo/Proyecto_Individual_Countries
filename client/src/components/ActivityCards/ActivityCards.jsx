@@ -45,9 +45,10 @@ const Activity = () => {
 
 
 
-  const handlerDelete = (id) => {
+  const handlerDelete =  (id) => {
     dispatch(deleteActivity(id));
     dispatch(getActivity());
+    console.log(id)
   };
   console.log(activities)
 

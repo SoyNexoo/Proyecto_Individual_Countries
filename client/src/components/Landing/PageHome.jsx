@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const Landing = () => {
   const [typing, setTyping] = useState(false);
   const [titleTyped, setTitleTyped] = useState("");
-  const titleType = "HENRYPaises";
+  const titleType = "HENRYPAISES";
 
   useEffect(() => {
     const timeout = setTimeout(() => {

@@ -1,5 +1,5 @@
 .container {
-  height: 80vw;
+  height: auto;
   background-color: #222222;
 }
 
@@ -37,6 +37,7 @@
 
 .info h3 {
   color: #f7dd4b;
+  letter-spacing: 4px;
 }
 
 .about {
@@ -50,33 +51,45 @@
   margin: 0 auto;
 }
 
-
-.technology{
-    color: #f7dd4b;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    /* width: 400px; */
-    align-items: center;
-    justify-content: center;
+.technology {
+  letter-spacing: 4px;
+  color: #f7dd4b;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  /* width: 400px; */
+  align-items: center;
+  justify-content: center;
 }
 
 .tech {
-    
-
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 5px;
   justify-items: center;
 }
 .tech img {
   /* width: 50px; */
-    margin: 20px;
+  margin: 20px;
   width: 80px;
   height: auto;
   transition: transform 0.3s ease-in-out;
 }
 
 .tech img:hover {
+  box-shadow: #f7dd4b;
   transform: scale(1.1);
 }
+
+.contactMe {
+  letter-spacing: 4px;
+  color: #f7dd4b;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  /* width: 400px; */
+  align-items: center;
+  justify-content: center;
+}
+
+

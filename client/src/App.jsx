@@ -10,6 +10,7 @@ import Activity from "./components/ActivityCards/ActivityCards";
 import Footer from "./components/Footer/Footer";
 import AboutMe from "./components/AboutMe/AboutMe";
 import axios from "axios";
+import NotFound from "./components/NotFound/NotFound";
 axios.defaults.baseURL = "http://localhost:3001";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/activity" element={<Activity />} />
         <Route path="/create" element={<FormActivity />} />
         <Route path="/about" element={<AboutMe /> } />
+        <Route path="*" element={<NotFound />} />
       </Routes>
         <Footer/>
     </div>

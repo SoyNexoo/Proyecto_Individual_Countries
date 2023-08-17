@@ -34,7 +34,8 @@
   padding: 16px 35px;
   background-color: #f7dd4b;
   border: none;
-  color: white;
+  color: black;
+  
   cursor: pointer;
   border-radius: 20px;
   box-shadow: inset -2px -2px 2px rgb(255, 196, 0);
@@ -63,7 +64,7 @@
   background-color: #f7dd4b;
   box-shadow: inset -2px -2px 2px rgb(255, 196, 0);
   border: none;
-  color: white;
+  color: rgb(36, 36, 36);
   cursor: pointer;
   margin-right: 10px;
   width: 20%;

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import s from "./AboutMe.module.css";
 
 const AboutMe = () => {
@@ -32,14 +33,24 @@ const AboutMe = () => {
         <h1>Mi Tech Skills ⚙️</h1>
         <div className={s.tech}>
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" />
-          <img src="https://assets.stickpng.com/images/5848309bcef1014c0b5e4a9a.png" />
+          <img src="https://seeklogo.com/images/R/redux-logo-9CA6836C12-seeklogo.com.png" />
           <img src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" />
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" />
           <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png" />
           <img src="https://cdn-icons-png.flaticon.com/512/174/174854.png" />
+          <img src="https://icones.pro/wp-content/uploads/2021/06/icone-github-violet.png" />
+          <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" />
         </div>
       </div>
-
+      <div className={s.contactMe}>
+        <h1>Contactame!</h1>
+        <div className={s.contacts}>
+          <a href="https://www.linkedin.com/in/julian-luque-2ba0281a6">
+            <button>Linkedin</button>
+          </a>
+        </div>
+        <svg src="../../"></svg>
+      </div>
     </div>
   );
 };
